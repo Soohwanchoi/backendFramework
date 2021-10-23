@@ -1,0 +1,31 @@
+--[[[ SELECT
+
+SELECT 
+N
+, TITLE
+, TXT
+, EM
+FROM
+BZ_BOARD
+WHERE 1 = 1
+[~ FIND_STR ^ IS_NOT_NULL ^ AND TITLE LIKE '%'||[FIND_STR]||'%' ~]
+ORDER BY N DESC
+
+
+--]]]
+
+--[[[ WRITE
+
+INSERT INTO BZ_BOARD
+(
+TITLE
+, TXT
+, EM
+) VALUES (
+[TITLE]
+, [TXT]
+, [EM]
+)
+
+
+--]]]
